@@ -13,11 +13,11 @@ https://github.com/YechengLyu/WPI-LiDAR-Camera-Calibration-Toolbox
 ## Test with docker
 ### on 1st terminal
 ```
-nvidia-docker run \
-              -it --rm \
-              --net foo \
-              --name master \
-              ros:kinetic-perception-xenial \
+nvidia-docker run
+              -it --rm
+              --net foo
+              --name master
+              ros:kinetic-perception-xenial
               roscore
 ```
 
