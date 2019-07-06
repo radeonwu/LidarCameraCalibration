@@ -61,10 +61,10 @@ docker exec -it talker bash
 install dependancies inside container,
 ```
 apt-get update &&\
-apt-get install ros-kinetic-ros-numpy &&\
-apt-get install ros-kinetic-tf2-sensor-msgs &&\
-apt-get install python-tk &&\
-apt-get install python-pip &&\
+apt-get install -y ros-kinetic-ros-numpy \
+                ros-kinetic-tf2-sensor-msgs \
+                python-tk \
+                python-pip &&\
 pip install --upgrade pip &&\
 python -m pip install -U matplotlib // this will install version 2.x
 
