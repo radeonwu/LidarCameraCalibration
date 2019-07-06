@@ -48,6 +48,7 @@ nvidia-docker run \
 
 cd $ROS_PACKAGE_PATH/catkin_ws/
 catkin_make
+source devel/setup.bash
 roslaunch lidar_camera_calibration play_rosbag.launch
 ```
 
@@ -66,9 +67,11 @@ apt-get install python-tk &&\
 apt-get install python-pip &&\
 pip install --upgrade pip &&\
 python -m pip install -U matplotlib // this will install version 2.x
+
+source /opt/ros/kinetic/share/catkin_ws/devel/setup.bash
 ```
 
 run calib
 ```
-rosrun auro_calibration calibrate_camera_lidar.py --calibrate
+rosrun lidar_camera_calibration calibrate_camera_lidar.py --calibrate
 ```
