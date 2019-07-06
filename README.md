@@ -1,4 +1,5 @@
 # LidarCameraCalibration
+## References
 
 An existing code using ROS and PCL library \
 https://github.com/heethesh/lidar_camera_calibration
@@ -11,6 +12,7 @@ An Matlab reference code \
 https://github.com/YechengLyu/WPI-LiDAR-Camera-Calibration-Toolbox
 
 ## Test with docker
+
 ### on 1st terminal
 ```
 nvidia-docker run \
@@ -46,7 +48,7 @@ enter the active container,
 docker exec -it talker bash
 ```
 
-install dependancy inside docker
+install dependancies inside container,
 ```
 apt-get install ros-kinetic-ros-numpy
 apt-get install ros-kinetic-tf2-sensor-msgs
