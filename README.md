@@ -33,7 +33,7 @@ nvidia-docker run \
               --env ROS_HOSTNAME=talker \
               --env ROS_MASTER_URI=http://master:11311 \
               -v $(pwd)/calibration/:/opt/ros/kinetic/share/catkin_ws/ \
-              ros:kinetic-perception-xenial \
+              ros:kinetic-perception-xenial
 
 cd $ROS_PACKAGE_PATH/catkin_ws/
 catkin_make
