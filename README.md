@@ -45,7 +45,7 @@ roslaunch lidar_camera_calibration play_rosbag.launch
 docker exec -it talker bash
 ```
 
-### install dependancy inside docker
+install dependancy inside docker
 ```
 apt-get install ros-kinetic-ros-numpy
 apt-get install ros-kinetic-tf2-sensor-msgs
@@ -55,7 +55,7 @@ pip install --upgrade pip
 python -m pip install -U matplotlib ***_this will install version 2.x_***
 ```
 
-## run calib
+run calib
 ```
 rosrun auro_calibration calibrate_camera_lidar.py --calibrate
 ```
