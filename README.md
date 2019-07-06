@@ -13,11 +13,11 @@ https://github.com/YechengLyu/WPI-LiDAR-Camera-Calibration-Toolbox
 ## Test with docker
 ### on 1st terminal
 ```
-nvidia-docker run
-              -it --rm
-              --net foo
-              --name master
-              ros:kinetic-perception-xenial
+nvidia-docker run \
+              -it --rm \
+              --net foo \
+              --name master \
+              ros:kinetic-perception-xenial \
               roscore
 ```
 
@@ -35,8 +35,8 @@ nvidia-docker run \
               -v $(pwd)/calibration/:/opt/ros/kinetic/share/catkin_ws/ \
               ros:kinetic-perception-xenial \
 
-cd $ROS_PACKAGE_PATH/catkin_ws/ \
-catkin_make \
+cd $ROS_PACKAGE_PATH/catkin_ws/
+catkin_make
 roslaunch lidar_camera_calibration play_rosbag.launch
 ```
 
@@ -47,11 +47,11 @@ docker exec -it talker bash
 
 ### install dependancy inside docker
 ```
-apt-get install ros-kinetic-ros-numpy \
-apt-get install ros-kinetic-tf2-sensor-msgs \
-apt-get install python-tk \
-apt-get install python-pip \
-pip install --upgrade pip \
+apt-get install ros-kinetic-ros-numpy
+apt-get install ros-kinetic-tf2-sensor-msgs
+apt-get install python-tk
+apt-get install python-pip
+pip install --upgrade pip
 python -m pip install -U matplotlib ***_this will install version 2.x_***
 ```
 
