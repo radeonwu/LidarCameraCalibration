@@ -13,6 +13,15 @@ https://github.com/YechengLyu/WPI-LiDAR-Camera-Calibration-Toolbox
 
 ## Test approach of Reference [1] with docker
 
+create a new network foo using the network command
+```
+docker network create foo
+```
+Give docker the rights to access the X-Server, by running below in terminal
+```
+xhost +local:docker
+```
+
 ### on 1st terminal
 ```
 nvidia-docker run \
@@ -50,11 +59,12 @@ docker exec -it talker bash
 
 install dependancies inside container,
 ```
-apt-get install ros-kinetic-ros-numpy
-apt-get install ros-kinetic-tf2-sensor-msgs
-apt-get install python-tk
-apt-get install python-pip
-pip install --upgrade pip
+apt-get update &&\
+apt-get install ros-kinetic-ros-numpy &&\
+apt-get install ros-kinetic-tf2-sensor-msgs &&\
+apt-get install python-tk &&\
+apt-get install python-pip &&\
+pip install --upgrade pip &&\
 python -m pip install -U matplotlib // this will install version 2.x
 ```
 
