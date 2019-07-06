@@ -11,6 +11,7 @@ An Matlab reference code \
 https://github.com/YechengLyu/WPI-LiDAR-Camera-Calibration-Toolbox
 
 # test with docker #
+## install dependancy ##
 apt-get install ros-kinetic-ros-numpy \
 apt-get install ros-kinetic-tf2-sensor-msgs \
 apt-get install python-tk \
@@ -19,4 +20,5 @@ pip install --upgrade pip \
 python -m pip install -U matplotlib \
 this will install version 2.x
 
+##run calib ##
 rosrun auro_calibration calibrate_camera_lidar.py --calibrate
