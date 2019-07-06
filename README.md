@@ -41,6 +41,7 @@ roslaunch lidar_camera_calibration play_rosbag.launch
 ```
 
 ## on 3rd terminal
+enter the active container,
 ```
 docker exec -it talker bash
 ```
@@ -52,7 +53,7 @@ apt-get install ros-kinetic-tf2-sensor-msgs
 apt-get install python-tk
 apt-get install python-pip
 pip install --upgrade pip
-python -m pip install -U matplotlib ***_this will install version 2.x_***
+python -m pip install -U matplotlib // this will install version 2.x
 ```
 
 run calib
