@@ -11,7 +11,7 @@ https://github.com/robofit/but_velodyne
 [3] An Matlab reference code \
 https://github.com/YechengLyu/WPI-LiDAR-Camera-Calibration-Toolbox
 
-## Test with docker
+## Test approach of Reference [1] with docker
 
 ### on 1st terminal
 ```
