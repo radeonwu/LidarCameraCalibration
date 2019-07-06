@@ -10,16 +10,20 @@ https://github.com/robofit/but_velodyne
 An Matlab reference code \
 https://github.com/YechengLyu/WPI-LiDAR-Camera-Calibration-Toolbox
 
-# test with docker
-## on 1st terminal
+## Test with docker
+### on 1st terminal
+```
 nvidia-docker run \
               -it --rm \
               --net foo \
               --name master \
               ros:kinetic-perception-xenial \
               roscore
+```
 
-## on 2nd terminal
+### on 2nd terminal
+
+```
 nvidia-docker run \
               -it --rm \
               --net foo \
@@ -34,9 +38,12 @@ nvidia-docker run \
 cd $ROS_PACKAGE_PATH/catkin_ws/ \
 catkin_make \
 roslaunch lidar_camera_calibration play_rosbag.launch
+```
 
 ## on 3rd terminal
+```
 docker exec -it talker bash
+```
 
 ### install dependancy inside docker
 ```
