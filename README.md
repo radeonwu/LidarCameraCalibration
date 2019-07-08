@@ -11,6 +11,10 @@ https://github.com/robofit/but_velodyne
 [3] An Matlab reference code \
 https://github.com/YechengLyu/WPI-LiDAR-Camera-Calibration-Toolbox
 
+[4] Autoware code \
+https://autoware.readthedocs.io/en/feature-documentation_rtd/DevelopersGuide/PackagesAPI/sensing/autoware_camera_lidar_calibrator.html
+
+
 ## Test approach of Reference [1] with docker
 
 create a new network foo using the network command
