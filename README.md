@@ -75,3 +75,5 @@ run calib
 ```
 rosrun lidar_camera_calibration calibrate_camera_lidar.py --calibrate
 ```
+### ROS Docker reference
+[1] https://hub.docker.com/_/ros
