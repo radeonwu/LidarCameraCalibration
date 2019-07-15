@@ -30,21 +30,21 @@ https://gitlab.com/autowarefoundation/autoware.ai/autoware/wikis/Generic-x86-Doc
 ### run autoware
 The code below uses example data set for illustration purpose.
 
-#### in 1st terminal
+##### in 1st terminal
 ```
 cd docker/generic
 ./build.sh
 roscore
 ```
 
-#### in 2nd terminal
+##### in 2nd terminal
 ```
 cd docker/generic
 ./build.sh
 cd ~/shared_dir/
 rosbag play -l new_rectified.bag
 ```
-#### in 3rd terminal
+##### in 3rd terminal
 ```
 cd docker/generic
 ./build.sh
@@ -52,7 +52,7 @@ source /opt/ros/kinetic/setup.bash
 rosrun rviz rviz
 ```
 
-#### in 4th terminal
+##### in 4th terminal
 ```
 cd docker/generic
 ./build.sh
