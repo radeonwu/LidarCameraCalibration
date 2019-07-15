@@ -27,7 +27,7 @@ Assuming docker and nvidia-docker runtime have been installed \
 Following steps as below \
 https://gitlab.com/autowarefoundation/autoware.ai/autoware/wikis/Generic-x86-Docker#run-an-autoware-docker-image
 
-#### Run autoware
+#### Run autoware calibration
 The code below uses example data set for illustration purpose.
 
 ##### in 1st terminal
@@ -62,10 +62,12 @@ camera intrinsic; the corners will be selected automatically
 ```
 roslaunch autoware_camera_lidar_calibrator camera_lidar_calibration.launch intrinsics_file:=/home/autoware/20190711_0256_autoware_camera_calibration.yaml image_src:=/sensors/camera/image_color 
 ```
-camera-lidar extrinsic; pick up 4 corners in each image and point cloud pair alternatively, until the transformation matrix is generated and the values are stable (in theory, the more image-lidar pairs are ticked, the more accurate for transformation values). \
+camera-lidar extrinsic; pick up 4 corners in each image and point cloud pair alternatively, until the transformation matrix is generated and the values are stable (in theory, the more image-lidar pairs are ticked, the more accurate for transformation values).
 
+#### Verify the calculated transformation 
+by projecting point cloud into image frame
 
-Now close the autoware_camera_lidar_calibrator node in Terminal 4, and continue with the following
+Close the autoware_camera_lidar_calibrator node in Terminal 4, and continue with the following
 ```
 rosrun calibration_publisher calibration_publisher  image_topic_name:=/sensors/camera/image_color
 ```
