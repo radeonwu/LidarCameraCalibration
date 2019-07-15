@@ -62,7 +62,11 @@ camera intrinsic; the corners will be selected automatically
 ```
 roslaunch autoware_camera_lidar_calibrator camera_lidar_calibration.launch intrinsics_file:=/home/autoware/20190711_0256_autoware_camera_calibration.yaml image_src:=/sensors/camera/image_color 
 ```
-camera-lidar extrinsic; pick up 4 corners in each image and point cloud pair alternatively, until the transformation matrix is generated and the values are stable (in theory, the more image-lidar pairs are ticked, the more accurate for transformation values).
+camera-lidar extrinsic; pick up 4 corners in each image and point cloud pair alternatively
+- click chessboard corner in the image
+- tick "Publish Point", then zoom/rotate/translate to find the corresponding point inside point cloud and select it
+
+until the transformation matrix is generated and the values are stable (in theory, the more image-lidar pairs are ticked, the more accurate for transformation values).
 
 #### Verify the calculated transformation 
 by projecting point cloud into image frame
