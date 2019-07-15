@@ -62,7 +62,7 @@ camera intrinsic; the corners will be selected automatically
 ```
 roslaunch autoware_camera_lidar_calibrator camera_lidar_calibration.launch intrinsics_file:=/home/autoware/20190711_0256_autoware_camera_calibration.yaml image_src:=/sensors/camera/image_color 
 ```
-camera-lidar extrinsic; pick up 4 corners in each image and point cloud pair alternatively, until the transformation matrix is generated and the values are stable (in theory, the more image-lidar pairs are ticked, the more accurate for transformation values). \  
+camera-lidar extrinsic; pick up 4 corners in each image and point cloud pair alternatively, until the transformation matrix is generated and the values are stable (in theory, the more image-lidar pairs are ticked, the more accurate for transformation values). 
 
 close the autoware_camera_lidar_calibrator node, and
 ```
@@ -75,7 +75,7 @@ cd docker/generic
 ./build.sh
 rosrun points2image points2image _points_node:=/sensors/velodyne_points
 ```
-The reason to run calibration_publisher and points2image manually is due to when launching them from the autoware runtime manager, options are missing or error occurs \ 
+The reason to run calibration_publisher and points2image manually is due to when launching them from the autoware runtime manager, options are missing or error occurs.
 
 ## Test approach of Reference [1] with docker
 Short summary: the full code can be run following all the steps, yet the testing result of this approach is not stable - the calibration matrix value vibrates a lot everytime after a new image/pointcloud pair is newly registed. 
