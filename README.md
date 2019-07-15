@@ -24,10 +24,12 @@ Short summary:
 
 ### install autoware via docker
 Assuming docker and nvidia-docker runtime have been installed \
-Following steps as below
+Following steps as below \
 https://gitlab.com/autowarefoundation/autoware.ai/autoware/wikis/Generic-x86-Docker#run-an-autoware-docker-image
 
 ### run autoware
+The code below uses example data set for illustration purpose.
+
 #### in 1st terminal
 ```
 cd docker/generic
