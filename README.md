@@ -58,11 +58,11 @@ cd docker/generic
 ./build.sh
 rosrun autoware_camera_lidar_calibrator cameracalibrator.py --square 0.05 --size 7x5 image:=/sensors/camera/image_color 
 ```
-// camera intrinsic; the corners will be selected automatically 
+camera intrinsic; the corners will be selected automatically 
 ```
 roslaunch autoware_camera_lidar_calibrator camera_lidar_calibration.launch intrinsics_file:=/home/autoware/20190711_0256_autoware_camera_calibration.yaml image_src:=/sensors/camera/image_color 
 ```
-// camera-lidar extrinsic; pick up corners in image and point cloud alternatively
+camera-lidar extrinsic; pick up corners in image and point cloud alternatively
 
 ## Test approach of Reference [1] with docker
 Short summary: the full code can be run following all the steps, yet the testing result of this approach is not stable - the calibration matrix value vibrates a lot everytime after a new image/pointcloud pair is newly registed. 
