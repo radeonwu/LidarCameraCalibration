@@ -20,7 +20,7 @@ https://github.com/CPFL/Autoware-Manuals/blob/master/en/Autoware_UsersManual_v1.
 ## Test approach of Autoware [4] with docker
 Short summary:
 - The code can be fully run, and both camera intrinsic and camera-LIDAR extrinsic can be calculated
-- The calibration result verification is still pending
+- Verification of calibration result is still pending
 
 ### install autoware via docker
 Assuming docker and nvidia-docker runtime have been installed \
