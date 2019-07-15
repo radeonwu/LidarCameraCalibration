@@ -74,7 +74,7 @@ Give docker the rights to access the X-Server, by running below in terminal
 xhost +local:docker
 ```
 
-### in 1st terminal
+##### in 1st terminal
 ```
 nvidia-docker run \
               -it --rm \
@@ -84,7 +84,7 @@ nvidia-docker run \
               roscore
 ```
 
-### in 2nd terminal
+##### in 2nd terminal
 
 ```
 nvidia-docker run \
@@ -104,7 +104,7 @@ source devel/setup.bash
 roslaunch lidar_camera_calibration play_rosbag.launch
 ```
 
-## in 3rd terminal
+##### in 3rd terminal
 enter the active container,
 ```
 docker exec -it talker bash
