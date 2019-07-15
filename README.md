@@ -17,7 +17,51 @@ https://ai4sig.org/2018/07/docker-for-autoware/
 https://github.com/CPFL/Autoware-Manuals/blob/master/en/Autoware_UsersManual_v1.1.md#runtime-manager-launching
 
 
+## Test approach of Autoware [4] with docker
+Short summary:
+- The code can be fully run, and both camera intrinsic and camera-LIDAR extrinsic can be calculated
+- The calibration result verification is still pending
+
+### install autoware via docker
+Assuming docker and nvidia-docker runtime have been installed \
+Following steps as below
+https://gitlab.com/autowarefoundation/autoware.ai/autoware/wikis/Generic-x86-Docker#run-an-autoware-docker-image
+
+### run autoware
+#### in 1st terminal
+```
+cd docker/generic
+./build.sh
+roscore
+```
+
+#### in 2nd terminal
+```
+cd docker/generic
+./build.sh
+cd ~/shared_dir/
+rosbag play -l new_rectified.bag
+```
+#### in 3rd terminal
+```
+cd docker/generic
+./build.sh
+source /opt/ros/kinetic/setup.bash
+rosrun rviz rviz
+```
+
+#### in 4th terminal
+```
+cd docker/generic
+./build.sh
+rosrun autoware_camera_lidar_calibrator cameracalibrator.py --square 0.05 --size 7x5 image:=/sensors/camera/image_color # camera intrinsic
+roslaunch autoware_camera_lidar_calibrator camera_lidar_calibration.launch intrinsics_file:=/home/autoware/20190711_0256_autoware_camera_calibration.yaml image_src:=/sensors/camera/image_color # camera-lidar extrinsic
+
+```
+
+
 ## Test approach of Reference [1] with docker
+Short summary: the full code can be run following all the steps, yet the testing result of this approach is not stable - the calibration matrix value vibrates a lot everytime after a new image/pointcloud pair is newly registed. 
 
 create a new network foo using the network command
 ```
@@ -28,7 +72,7 @@ Give docker the rights to access the X-Server, by running below in terminal
 xhost +local:docker
 ```
 
-### on 1st terminal
+### in 1st terminal
 ```
 nvidia-docker run \
               -it --rm \
@@ -38,7 +82,7 @@ nvidia-docker run \
               roscore
 ```
 
-### on 2nd terminal
+### in 2nd terminal
 
 ```
 nvidia-docker run \
@@ -58,7 +102,7 @@ source devel/setup.bash
 roslaunch lidar_camera_calibration play_rosbag.launch
 ```
 
-## on 3rd terminal
+## in 3rd terminal
 enter the active container,
 ```
 docker exec -it talker bash
