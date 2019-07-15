@@ -22,12 +22,12 @@ Short summary:
 - The code can be fully run, and both camera intrinsic and camera-LIDAR extrinsic can be calculated
 - Verification of calibration result is still pending
 
-### install autoware via docker
+#### Install autoware via docker
 Assuming docker and nvidia-docker runtime have been installed \
 Following steps as below \
 https://gitlab.com/autowarefoundation/autoware.ai/autoware/wikis/Generic-x86-Docker#run-an-autoware-docker-image
 
-### run autoware
+#### Run autoware
 The code below uses example data set for illustration purpose.
 
 ##### in 1st terminal
