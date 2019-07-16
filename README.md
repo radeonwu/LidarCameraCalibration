@@ -2,7 +2,7 @@
 
 **Table of Contents** \
 [References](##References) \
-[Test approach of Autoware](## Autoware [4] with docker) \
+[Test approach of Autoware](## Autoware with docker) \
 [Test approach of existing ROS Code](##Test approach of Reference [1] with docker) \
 
 ## References
@@ -22,7 +22,7 @@ https://ai4sig.org/2018/07/docker-for-autoware/
 https://github.com/CPFL/Autoware-Manuals/blob/master/en/Autoware_UsersManual_v1.1.md#runtime-manager-launching
 
 
-## Autoware [4] with docker
+## Autoware with docker
 Short summary:
 - The code can be fully run, and both camera intrinsic and camera-LIDAR extrinsic can be calculated
 - Verification of calibration result is still pending
