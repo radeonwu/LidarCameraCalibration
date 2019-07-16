@@ -83,8 +83,16 @@ cd docker/generic
 ./build.sh
 rosrun points2image points2image _points_node:=/sensors/velodyne_points
 ```
-The reason to run calibration_publisher and points2image manually is due to when launching them from the autoware runtime manager, options are missing or error occurs.
+The reason to run calibration_publisher and points2image manually as above is due to when launching them from the autoware runtime manager, options are missing or error occurs. \
 
+In case by default calibration_publisher does not use the latest calibration yaml file, run the following
+```
+rosparam set /calibration_publisher/calibration_file /home/autoware/20190716_083429_autoware_lidar_camera_calibration.yaml
+```
+In case calibration_publisher does not publish /projection_matrix topic as expected, run the following
+```
+rosparam set /calibration_publisher/publish_extrinsic_mat true
+```
 
 ## Test approach of Reference [1] with docker
 Short summary: the full code can be run following all the steps, yet the testing result of this approach is not stable - the calibration matrix value vibrates a lot everytime after a new image/pointcloud pair is newly registed. 
