@@ -3,7 +3,7 @@
 **Table of Contents** \
 [References](##References) \
 [Test approach of Autoware](#Autoware-with-docker) \
-[Test approach of existing ROS Code](##Test-approach-of-Reference-[1]-with-docker)
+[Test approach of existing ROS Code](#test-approach-of-reference-1-with-docker)
 
 ## References
 [1] An existing code using ROS and PCL library \
