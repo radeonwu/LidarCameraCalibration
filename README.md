@@ -1,6 +1,6 @@
 # LidarCameraCalibration
 
-Table of Contents
+Table of Contents \
 [References](##References)
 
 ## References
