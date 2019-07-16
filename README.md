@@ -83,7 +83,7 @@ cd docker/generic
 ./build.sh
 rosrun points2image points2image _points_node:=/sensors/velodyne_points
 ```
-The reason to run calibration_publisher and points2image manually as above is due to when launching them from the autoware runtime manager, options are missing or error occurs. \
+The reason to run calibration_publisher and points2image manually as above is due to when launching them from the autoware runtime manager, options are missing or error occurs.
 
 In case by default calibration_publisher does not use the latest calibration yaml file, run the following
 ```
