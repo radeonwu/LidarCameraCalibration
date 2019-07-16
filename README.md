@@ -1,6 +1,9 @@
 # LidarCameraCalibration
-## References
 
+Table of Contents
+[References](##References)
+
+## References
 [1] An existing code using ROS and PCL library \
 https://github.com/heethesh/lidar_camera_calibration
 
