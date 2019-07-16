@@ -17,8 +17,8 @@ https://github.com/robofit/but_velodyne
 https://github.com/YechengLyu/WPI-LiDAR-Camera-Calibration-Toolbox
 
 [4] Autoware code \
-https://autoware.readthedocs.io/en/feature-documentation_rtd/DevelopersGuide/PackagesAPI/sensing/autoware_camera_lidar_calibrator.html
-https://ai4sig.org/2018/07/docker-for-autoware/
+https://autoware.readthedocs.io/en/feature-documentation_rtd/DevelopersGuide/PackagesAPI/sensing/autoware_camera_lidar_calibrator.html \
+https://ai4sig.org/2018/07/docker-for-autoware/ \
 https://github.com/CPFL/Autoware-Manuals/blob/master/en/Autoware_UsersManual_v1.1.md#runtime-manager-launching
 
 
